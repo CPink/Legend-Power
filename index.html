@@ -1,15 +1,14 @@
-<!DOCTYPE html>
 <html ng-app="lp">
   <head>
     <meta charset="utf-8">
     <title>Champs</title>
   </head>
   <body>
-    <div ng-model="champCtlr as champs">
-      <li data-ng-repeat="champ in champs | filterBy:orderBy: name">
+    <div ng-controller="champCtlr">
+      <li data-ng-repeat="champs in champCtlr | filterBy:orderBy: name">
       </li>
       <li>
-        {{ champ.name }}
+        {{ champs.name }}
       </li>
     </div>
 
@@ -17,10 +16,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
 
     <!-- Firebase -->
-    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+    <!-- <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script> -->
 
     <!-- AngularFire -->
-    <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
+    <!-- <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script> -->
     <script src="lp.module.js"></script>
     <script src="controllers/controller.js"></script>
     <script src="services/service.js"></script>

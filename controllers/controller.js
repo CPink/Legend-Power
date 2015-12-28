@@ -10,6 +10,7 @@
           vm.champs = [];
           vm.getChamps = getChamps;
 
+          // getChamps();
           activate();
 
           function activate() {
@@ -23,7 +24,7 @@
           function getChamps() {
               return champService.getChamps()
                   .then(function(data) {
-                      vm.champs = data;
+                      vm.champs.push(data);
                       return vm.champs;
                   });
           }

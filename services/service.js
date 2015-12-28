@@ -16,7 +16,8 @@
           .catch(getChampsFailed);
 
       function getChampService(response) {
-          return response.data.results;
+        console.log(response.data);
+          return response.data;
       }
 
       function getChampsFailed(error) {
